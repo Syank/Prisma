@@ -93,17 +93,21 @@ namespace Prisma {
 
         }
 
-        private void hoverEnterCloseButton(object sender, EventArgs e) {
+        private void hoverEnterButton(object sender, EventArgs e) {
             ButtonsHover.hoverEnter(sender);
 
         }
 
-        private void hoverExitCloseButton(object sender, EventArgs e) {
+        private void hoverExitButton(object sender, EventArgs e) {
             ButtonsHover.hoverExit(sender);
             
         }
 
         private void iconPictureBox1_Click_1(object sender, EventArgs e) {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e) {
 
         }
     }

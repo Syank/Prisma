@@ -56,6 +56,7 @@
     <Compile Include="src\Model\Buttons\ButtonProperties.cs" />
     <Compile Include="src\Model\Buttons\ButtonsHover.cs" />
     <Compile Include="src\Model\Buttons\CloseWindowButtonProperties.cs" />
+    <Compile Include="src\Model\Buttons\MenuOptionButtonProperties.cs" />
     <Compile Include="src\Model\Buttons\MinizeWindowButtonProperties.cs" />
     <Compile Include="src\Model\Factories\ButtonPropertiesDefiner.cs" />
     <Compile Include="src\PrismaApplication.cs">

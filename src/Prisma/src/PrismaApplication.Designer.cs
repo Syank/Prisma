@@ -28,16 +28,22 @@
         private void InitializeComponent() {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.MinimizeWindowButton = new FontAwesome.Sharp.IconButton();
             this.CloseWindowButton = new FontAwesome.Sharp.IconButton();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.MenuOptionPasswordBank = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.MenuOptionPasswordBank.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,6 +72,34 @@
             this.panel3.Size = new System.Drawing.Size(200, 30);
             this.panel3.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(35, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Prisma";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.iconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Gem;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 24;
+            this.iconPictureBox1.Location = new System.Drawing.Point(6, 6);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.iconPictureBox1.TabIndex = 1;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click_1);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.MinimizeWindowButton);
@@ -92,8 +126,8 @@
             this.MinimizeWindowButton.TabIndex = 2;
             this.MinimizeWindowButton.UseVisualStyleBackColor = false;
             this.MinimizeWindowButton.Click += new System.EventHandler(this.minimizeWindow);
-            this.MinimizeWindowButton.MouseEnter += new System.EventHandler(this.hoverEnterCloseButton);
-            this.MinimizeWindowButton.MouseLeave += new System.EventHandler(this.hoverExitCloseButton);
+            this.MinimizeWindowButton.MouseEnter += new System.EventHandler(this.hoverEnterButton);
+            this.MinimizeWindowButton.MouseLeave += new System.EventHandler(this.hoverExitButton);
             // 
             // CloseWindowButton
             // 
@@ -112,51 +146,63 @@
             this.CloseWindowButton.TabIndex = 1;
             this.CloseWindowButton.UseVisualStyleBackColor = false;
             this.CloseWindowButton.Click += new System.EventHandler(this.closeWindow);
-            this.CloseWindowButton.MouseEnter += new System.EventHandler(this.hoverEnterCloseButton);
-            this.CloseWindowButton.MouseLeave += new System.EventHandler(this.hoverExitCloseButton);
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.iconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Gem;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 24;
-            this.iconPictureBox1.Location = new System.Drawing.Point(6, 6);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.iconPictureBox1.TabIndex = 1;
-            this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(35, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Prisma";
+            this.CloseWindowButton.MouseEnter += new System.EventHandler(this.hoverEnterButton);
+            this.CloseWindowButton.MouseLeave += new System.EventHandler(this.hoverExitButton);
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Gray;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.panel4.Controls.Add(this.MenuOptionPasswordBank);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 30);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 510);
             this.panel4.TabIndex = 1;
             // 
+            // MenuOptionPasswordBank
+            // 
+            this.MenuOptionPasswordBank.Controls.Add(this.label2);
+            this.MenuOptionPasswordBank.Controls.Add(this.iconPictureBox2);
+            this.MenuOptionPasswordBank.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MenuOptionPasswordBank.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MenuOptionPasswordBank.Location = new System.Drawing.Point(0, 0);
+            this.MenuOptionPasswordBank.Name = "MenuOptionPasswordBank";
+            this.MenuOptionPasswordBank.Size = new System.Drawing.Size(200, 61);
+            this.MenuOptionPasswordBank.TabIndex = 3;
+            this.MenuOptionPasswordBank.MouseEnter += new System.EventHandler(this.hoverEnterButton);
+            this.MenuOptionPasswordBank.MouseLeave += new System.EventHandler(this.hoverExitButton);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(76, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Banco de senhas";
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Key;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 40;
+            this.iconPictureBox2.Location = new System.Drawing.Point(12, 14);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(41, 40);
+            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.iconPictureBox2.TabIndex = 3;
+            this.iconPictureBox2.TabStop = false;
+            // 
             // PrismaApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(960, 540);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -167,8 +213,12 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.MenuOptionPasswordBank.ResumeLayout(false);
+            this.MenuOptionPasswordBank.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,6 +233,9 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel MenuOptionPasswordBank;
+        private System.Windows.Forms.Label label2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
     }
 
 }
