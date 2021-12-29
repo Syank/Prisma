@@ -57,7 +57,9 @@
     <Compile Include="src\Model\Buttons\ButtonsHover.cs" />
     <Compile Include="src\Model\Buttons\CloseWindowButtonProperties.cs" />
     <Compile Include="src\Model\Buttons\MenuOptionButtonProperties.cs" />
-    <Compile Include="src\Model\Buttons\MinizeWindowButtonProperties.cs" />
+    <Compile Include="src\Model\Buttons\MinimizeWindowButtonProperties.cs" />
+    <Compile Include="src\Model\ColorUtils\GradientBuilder.cs" />
+    <Compile Include="src\Model\Components\TopBarProperties.cs" />
     <Compile Include="src\Model\Factories\ButtonPropertiesDefiner.cs" />
     <Compile Include="src\PrismaApplication.cs">
       <SubType>Form</SubType>

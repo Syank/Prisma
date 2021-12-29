@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Prisma.src.Model.Buttons {
 
-    internal class MinizeWindowButtonProperties: ButtonProperties {
+    internal class MinimizeWindowButtonProperties: ButtonProperties {
 
         public static string buttonName = "MinimizeWindowButton";
 
-        public MinizeWindowButtonProperties() {
+        public MinimizeWindowButtonProperties() {
             hoverBackgroundColor = Color.FromArgb(51, 51, 51);
             normalBackgroundColor = Color.Transparent;
 

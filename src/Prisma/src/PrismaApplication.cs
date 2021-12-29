@@ -1,14 +1,11 @@
-﻿using System;
+﻿using Prisma.src.Model.Buttons;
+using Prisma.src.Model.ColorUtils;
+using Prisma.src.Model.Components;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
-using FontAwesome.Sharp;
-using Prisma.src.Model.Buttons;
 
 
 
@@ -110,6 +107,34 @@ namespace Prisma {
         private void iconButton1_Click(object sender, EventArgs e) {
 
         }
+
+        private void hoverEnterParent(object sender, EventArgs e) {
+            Control targetElement = sender as Control;
+
+            Control targetParent = targetElement.Parent;
+
+            ButtonsHover.hoverEnter(targetParent);
+
+        }
+
+        private void hoverExitParent(object sender, EventArgs e) {
+            Control targetElement = sender as Control;
+
+            Control targetParent = targetElement.Parent;
+
+            ButtonsHover.hoverExit(targetParent);
+
+        }
+
+        private void paintTopBar(object sender, PaintEventArgs e) {
+            Dictionary<Color, float> sortedDictionary = TopBarProperties.colorsGradient;
+
+            LinearGradientBrush brush = GradientBuilder.buildGradientBrush(this.ClientRectangle, sortedDictionary, 0);
+
+            e.Graphics.FillRectangle(brush, this.ClientRectangle);
+
+        }
+
     }
 
 }

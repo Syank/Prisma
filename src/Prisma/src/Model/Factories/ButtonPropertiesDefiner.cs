@@ -11,29 +11,24 @@ namespace Prisma.src.Model.Factories {
     internal class ButtonPropertiesDefiner {
 
         public static ButtonProperties getButtonPropertiesObject(object targetButton) {
-            ButtonProperties button;
-            Console.WriteLine(targetButton.GetType());
-            if(targetButton is IconButton || targetButton is Panel) {
-                string buttonName = (targetButton as IconButton).Name;
+            ButtonProperties properties;
 
-                if (buttonName == CloseWindowButtonProperties.buttonName) {
-                    button = new CloseWindowButtonProperties();
+            string targetName = (targetButton as Control).Name;
 
-                } else if (buttonName == MinizeWindowButtonProperties.buttonName) {
-                    button = new MinizeWindowButtonProperties();
+            if (targetName == CloseWindowButtonProperties.buttonName) {
+                properties = new CloseWindowButtonProperties();
 
-                } else if (buttonName.Contains(MenuOptionButtonProperties.buttonName)){
-                    button = new MenuOptionButtonProperties();
+            } else if (targetName == MinimizeWindowButtonProperties.buttonName) {
+                properties = new MinimizeWindowButtonProperties();
 
-                } else {
-                    throw new Exception("No button implementation found");
-                }
+            } else if (targetName.Contains(MenuOptionButtonProperties.buttonName)) {
+                properties = new MenuOptionButtonProperties();
 
             } else {
-                throw new Exception("Not a valid button");
+                throw new Exception("No button implementation found");
             }
 
-            return button;
+            return properties;
         }
 
     }

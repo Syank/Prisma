@@ -1,10 +1,7 @@
-﻿using FontAwesome.Sharp;
-using Prisma.src.Model.Factories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Prisma.src.Model.Factories;
+using System.Windows.Forms;
+
+
 
 namespace Prisma.src.Model.Buttons {
     internal class ButtonsHover {
@@ -12,7 +9,7 @@ namespace Prisma.src.Model.Buttons {
         public static void hoverEnter(object targetElement) {
             ButtonProperties properties = ButtonPropertiesDefiner.getButtonPropertiesObject(targetElement);
 
-            IconButton button = targetElement as IconButton;
+            Control button = targetElement as Control;
 
             button.BackColor = properties.getHoverBackgroundColor();
 
@@ -21,7 +18,7 @@ namespace Prisma.src.Model.Buttons {
         public static void hoverExit(object targetElement) {
             ButtonProperties properties = ButtonPropertiesDefiner.getButtonPropertiesObject(targetElement);
 
-            IconButton button = targetElement as IconButton;
+            Control button = targetElement as Control;
 
             button.BackColor = properties.getNormalBackgroundColor();
 
