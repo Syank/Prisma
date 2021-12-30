@@ -11,7 +11,7 @@ namespace Prisma.src.Model.Buttons {
         public static string buttonName = "MenuOption";
 
         public MenuOptionButtonProperties() {
-            hoverBackgroundColor = Color.AliceBlue;
+            hoverBackgroundColor = Color.FromArgb(100, 0, 0, 0);
             normalBackgroundColor = Color.Transparent;
 
         }

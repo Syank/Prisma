@@ -1,10 +1,12 @@
 ﻿using Prisma.src.Model.Buttons;
 using Prisma.src.Model.ColorUtils;
 using Prisma.src.Model.Components;
+using Prisma.src.Model.Menu;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Linq;
 using System.Windows.Forms;
 
 
@@ -130,6 +132,15 @@ namespace Prisma {
             Dictionary<Color, float> sortedDictionary = TopBarProperties.colorsGradient;
 
             LinearGradientBrush brush = GradientBuilder.buildGradientBrush(this.ClientRectangle, sortedDictionary, 0);
+
+            e.Graphics.FillRectangle(brush, this.ClientRectangle);
+
+        }
+
+        private void paintMenu(object sender, PaintEventArgs e) {
+            Dictionary<Color, float> sortedDictionary = MenuProperties.colorsGradient;
+
+            LinearGradientBrush brush = GradientBuilder.buildGradientBrush(this.ClientRectangle, sortedDictionary, 45);
 
             e.Graphics.FillRectangle(brush, this.ClientRectangle);
 

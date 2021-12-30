@@ -61,6 +61,7 @@
     <Compile Include="src\Model\ColorUtils\GradientBuilder.cs" />
     <Compile Include="src\Model\Components\TopBarProperties.cs" />
     <Compile Include="src\Model\Factories\ButtonPropertiesDefiner.cs" />
+    <Compile Include="src\Model\Menu\MenuProperties.cs" />
     <Compile Include="src\PrismaApplication.cs">
       <SubType>Form</SubType>
     </Compile>
