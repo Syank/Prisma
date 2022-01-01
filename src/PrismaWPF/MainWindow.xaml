@@ -1,0 +1,33 @@
+﻿<Window x:Class="PrismaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrismaWPF"
+        mc:Ignorable="d"
+        Title="Prisma" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Border Background="#272537" CornerRadius="20, 20, 0, 0">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Prisma" Margin="15, 0, 0, 0" FontSize="16" Foreground="White" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
+
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="Início" Foreground="White" Height="50" FontSize="14" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Banco de senhas" Foreground="White" Height="50" FontSize="14" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Calendário" Foreground="White" Height="50" FontSize="14" Style="{StaticResource MenuButton}"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
